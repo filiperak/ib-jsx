@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(255, 47, 206);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: red;
+}
+h2{
+    color: blue;
+}
+p{
+    color: yellow;
+    font-size: 20px;
+}
+img{
+    height: 400px;
+    width: 300px;
+    border: 2px dotted rgb(209, 219, 209);
+}
+a{
+    color: rgb(35, 66, 93);
+}
+.dodati_naslov{
+    text-align: center;
+}
+.p_klasa{
+    text-align: right;
+    font-size: 24px;
+}
+h3:last-of-type{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: green;
+}
+li:nth-child(odd){
+    color: green;
+}
+
+a:visited{
+    color:green;
+}
+a:hover{
+    color: yellow;
+}

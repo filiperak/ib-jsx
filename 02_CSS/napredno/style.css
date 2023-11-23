@@ -1,0 +1,70 @@
+/*kada vise elemenata imaju ista svojstva*/
+h3,h4{
+    color:orange;
+}
+.desno_poravnanje{
+    text-align: right;
+}
+.crveni_tekst{
+    color: red;
+}
+.drugi, #treci{
+    background-color: yellow;
+}
+#treci{
+    font-style: oblique;
+    border: solid 3px red;
+    border-radius: 25px;
+}
+/*prioritet selektora*/
+li{
+    color: limegreen;
+}
+.stavka{
+    color: blue;
+}
+#prva_stavka{
+    color: orange;
+}
+#cetvrta_stavka{
+    color: brown !important;
+}
+#peta_stavka{
+    color: bisque;
+}
+
+p{
+    color: gray;
+}
+div p{
+    color: aquamarine;
+}
+div > p{
+    border: 2px solid green;
+}
+a{
+    color:lime;
+    text-decoration: none;
+}
+a:visited{
+    color: brown;
+}
+a:hover{
+    background-color: yellow;
+}
+a:active{
+    background-color: black;
+}
+p:first-child{
+    font-weight: bold;
+}
+/**/
+li:nth-child(3){
+    font-weight: bold;
+}
+li:nth-child(2n){
+    text-decoration: line-through;
+}
+li:hover{
+    background-color: aquamarine;
+}
