@@ -1,0 +1,39 @@
+a{
+    /*
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+    border-radius: 25%;
+    border-top-color: yellow;
+    */
+    border: 3px solid red;
+    border-radius: 6px;
+    /*
+    margin-left: 10px;
+    margin-top: 5pt;
+    */
+    margin: 5px 0 0 10px;
+    padding: 15px 23px;
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+}
+p{
+    background-color: rgb(168, 168, 204);
+    border: 4px solid black;
+    width: 200px;
+    height: 300px;
+}
+/*
+    BLOCK ELEMENT(ZAUZIMA CEMU SIRINU EKRANA)
+    P,DIV,H,TABLE
+    ----------------
+    INLINE ELEMENT(ZAUZIMA SAMO NEOPHODNU SIRINU I VISINU)
+    A,SPAN,TD
+------------------------------
+    display svojstvo
+        display:block;(ovim elementima mozete da podesavata width i heigth)-redjaju se jedan ispod drugog
+        display:block;(ne moze da se podesava visina i sirina-redjaju sse jedan pored drugog)
+        display:inline-blok((ovim elementima mozete da podesavata width i heigth)redjaju sse jedan pored drugog)
+
+*/
