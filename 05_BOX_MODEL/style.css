@@ -37,3 +37,16 @@ p{
         display:inline-blok((ovim elementima mozete da podesavata width i heigth)redjaju sse jedan pored drugog)
 
 */
+span{
+    background-color: brown;
+    color: white;
+    border: 3px solid blue;
+    padding: 30px;
+    width: 50%;
+    display: inline-block;
+    
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}

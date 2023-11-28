@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;/*BITNO*/
+}
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.topbar ul{
+    overflow: hidden;
+    list-style: none;
+}
+.topbar ul li{
+    float: left;
+    /*display: inline-block; moze i ovako*/
+    width: 25%;
+    border: 1px solid red;
+    text-align: center;
+    background-color: brown;
+
+}
+.topbar ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+    display: block;
+}
+.topbar ul li a:hover{
+    background-color: chocolate;
+}
+/*horizontalni meni*/
+.ostatak{
+    position: relative;
+    top: 45px;
+    overflow: hidden;
+}
+.ostatak aside{
+    float: left;
+    width: 30%;
+
+}
+.ostatak section{
+    float: left;
+    width: 70%;
+}
+/*vertikalni meni*/
+.ostatak aside ul{
+    list-style: none;
+}
+.ostatak ul li{
+    border: 1px solid rgb(165, 0, 0)(0, 30, 255);
+    text-align: center;
+    background-color: rgb(99, 165, 42);
+}
+.ostatak aside ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+    display: block;
+}
+.ostatak aside ul li a:hover{
+    background-color: greenyellow;
+}
+/*------padajuci meni------*/
+.dropdown{
+    display: none;
+}
+
+.topbar li:nth-child(4):hover .dropdown{
+    display: block;
+}

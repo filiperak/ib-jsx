@@ -1,0 +1,29 @@
+/*
+    1)html: parent-child struktura
+    2)childre: float
+    3)parent:overflow
+
+*/
+div{
+    background-color: brown;
+    overflow: hidden;
+    
+    
+}
+/*.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  ovo je alternativno resenje
+*/
+p{
+    background-color: aquamarine;
+    height: 50px;
+    width: 250px;
+    float: right;
+    border: 3px solid blue;
+}
+p:nth-child(2n){
+    float: left;
+}
