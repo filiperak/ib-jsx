@@ -60,6 +60,7 @@ let radioZenski = document.getElementById('zenski')
 let radioNeopredeljen = document.getElementById('neopredeljen')
 btnIspisiTekst.addEventListener('dblclick', () => {
     //1 nacin
+    //console.log(radioMuski.checked);
     if(radioMuski.checked){
         console.log('osoba muskog pola');
     }else if(radioZenski.checked){
@@ -67,5 +68,53 @@ btnIspisiTekst.addEventListener('dblclick', () => {
     }else{
         console.log('osoba se nije opredila');
     }
+    //2 nacin
+    //selektuj mi input polje cij atribun name ima vrednost pol  i pri tome je chekiran
+    let checkedPol = document.querySelector('input[name="pol"]:checked')
+    //console.log(checkedPol.value,checkedPol.id);
+    console.log(`osoba je ${checkedPol.value}pola(drugi nacin)`);
+    //3 nacin
+    //selektun sve radio buttone prema name atributu
+    let polRadios = document.getElementsByName('pol');
+    //console.log(polRadios);//vraca nodeLIst
+    polRadios.forEach(elem => {
+        if(elem.checked){
+            console.log(`osoba je ${elem.value} pola(treci nacin)`);
+        }
+    });
+    //4
+    let polRInput = document.querySelectorAll('input[name="pol"]');
+    polRInput.forEach(elem => {
+        if(elem.checked){
+            console.log(`osoba je ${elem.value} pola(cetvrti nacin)`);
+        }
+    })
 
+});
+////////////////////////////////////////////////////
+let kInput = document.querySelector("#kvadratInput");
+let kButton = document.querySelector("#kvadratButton");
+let kRez = document.querySelector("#kvadratRezultat");
+
+let pInput = document.querySelector("#prepoloviInput");
+let pButton = document.querySelector("#prepoloviButton");
+let pRez = document.querySelector("#prepoloviRezultat");
+
+let prInput = document.querySelector("#precnikInpuz");
+let prButton = document.querySelector("#precnikButton");
+let prRez = document.querySelector("#precnikRezultat");
+
+kButton.addEventListener('click',() => {
+    kRez.innerHTML = (kInput.value) ** 2;
+    kInput.value= "";
+})
+
+pButton.addEventListener('click',() => {
+    pRez.innerHTML = (pInput.value) /2;
+    pInput.value = "";
+});
+
+prButton.addEventListener('click',() => {
+    prRez.innerHTML = ((prInput.value) ** 2)* Math.PI;
+    prInput.value = ""
 });

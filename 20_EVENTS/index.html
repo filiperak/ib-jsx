@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
     <button id="hallo">Klikni za hello</button>
@@ -18,11 +19,38 @@
         <button id="ispisiText">Ispisi</button>
         <p id="ispisTeksta"></p>
         <label for="">pol:</label>
-        <input type="radio" name="pol" value="m" id="muski">muski
-        <input type="radio" name="pol" value="z" id="zenski">zenski
-        <input type="radio" name="pol" value="n" id="neopredeljen" checked>neopredeljen
+        <input type="radio" name="pol" value="muskog" id="muski">muski
+        <input type="radio" name="pol" value="zenskog" id="zenski">zenski
+        <input type="radio" name="pol" value="neopredeljenog" id="neopredeljen" checked>neopredeljen
 
     </div>
+
+    <div style="border: 2px solid;padding:35px">
+        <p>
+        <label for="">kvadriraj ovaj broj:</label>
+        <input type="number" id="kvadratInput">
+        <button id="kvadratButton">izracunaj</button>
+        </p>
+        <label for="" id="kvadratRezultat"></label>
+        
+        <p>
+        <label for="">prepolovi ovaj broj:</label>
+        <input type="number" id="prepoloviInput">
+        <button id="prepoloviButton">izracunaj</button>
+        </p>
+        <label for="" id="prepoloviRezultat"></label>
+        
+        <p>
+        <label for="">izracunati povrsinu kruga za zadati poluprecnik:</label>
+        <input type="number" id="precnikInpuz">
+        <button id="precnikButton">izracunaj</button>
+        </p>
+        <label for="" id="precnikRezultat"></label>
+        
+    </div>
+
+  
+
     <script src="script.js"></script>
 </body>
 </html>
