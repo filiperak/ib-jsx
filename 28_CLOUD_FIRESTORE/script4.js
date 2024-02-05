@@ -56,6 +56,7 @@ db.collection('customers')
 db.collection('customers')
 .where('salary','>=',100)
 .where('salary','<=',300)
+
 .get()
 .then(snapshot => {
     snapshot.forEach(elem => {
@@ -66,3 +67,50 @@ db.collection('customers')
 .catch(err => {
     console.log(`error: ${err}`);
 });
+
+db.collection('customers')
+.where('age','==',21)
+.where('salary','>',150)
+.orderBy('salary')
+.get()
+.then(snapshot => {
+    snapshot.forEach(elem => {
+        let data = elem.data()
+        console.log(data);
+    })
+})
+.catch(err => {
+    console.log(`error: ${err}`);
+});
+
+//dohvata klijente koji imaju preko 25 godina sortirane po imeenu
+
+db.collection('customers')
+.where('age','>',25)
+.orderBy('age')
+.orderBy('name')
+.get()
+.then(snapshot => {
+    snapshot.forEach(elem => {
+        let data = elem.data()
+        console.log(data);
+    })
+})
+.catch(err => {
+    console.log(`error: ${err}`);
+});
+
+
+db.collection('customers')
+.where('adresses','array-contains','nis')
+.get()
+.then(snapshot => {
+    snapshot.forEach(elem => {
+        let data = elem.data()
+        console.log(data);
+    })
+})
+.catch(err => {
+    console.log(`error: ${err}`);
+});
+
