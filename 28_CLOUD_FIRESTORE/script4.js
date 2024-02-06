@@ -182,8 +182,21 @@ db.collection('tasks')
     console.log(`error: ${err}`);
 });
 
+db.collection('tasks')
+.where('due_date','<',datum)
+.get()
+.then(snapshot => {
+    snapshot.forEach(elem => {
+        let data = elem.data()
+        console.log(data);
+    })
+})
+.catch(err => {
+    console.log(`error: ${err}`);
+});
+
 /////////////////////////////////////////////////////////
-/*
+
 db.collection('movies')
 .where('rating','<',9)
 .where('rating','>',7)
@@ -212,7 +225,7 @@ db.collection('movies')
 });
 
 db.collection('movies')
-.where('genres','array-contains-any',['comedy','action'])
+.where('genres','array-contains-any',['comedy','action','drama'])
 .get()
 .then(snapshot => {
     snapshot.forEach(elem => {
@@ -223,4 +236,49 @@ db.collection('movies')
 .catch(err => {
     console.log(`error: ${err}`);
 });
-*/
+
+
+db.collection('movies')
+.where('release_year','>',2000)
+.get()
+.then(snapshot => {
+    snapshot.forEach(elem => {
+        let data = elem.data()
+        console.log(data);
+    })
+})
+.catch(err => {
+    console.log(`error: ${err}`);
+});
+
+
+db.collection('movies')
+.orderBy('rating','desc')
+.limit(1)
+.get()
+.then(snapshot => {
+    snapshot.forEach(elem => {
+        let data = elem.data()
+        console.log(data);
+    })
+})
+.catch(err => {
+    console.log(`error: ${err}`);
+});
+///////////////////////////////////
+db.collection('movies')
+.orderBy('rating','asc')
+.where('genres','array-contains','action')
+.limit(1)
+.get()
+.then(snapshot => {
+    snapshot.forEach(elem => {
+        let data = elem.data()
+        console.log(data);
+        console.log(data.name,data.director.ime,data.director.prezime,data.rating);
+
+    })
+})
+.catch(err => {
+    console.log(`error: ${err}`);
+});
