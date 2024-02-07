@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#chatroomOptions{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.chatroom{
+    background-color: blueviolet;
+    width: 25%;
+    text-align: center;
+    padding: 3px;
+    margin: 2px;
+    border-radius: 3px;
+}
+#inputMsg{
+
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    background-color: purple;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
+
+form{
+    margin: 15px;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+input:focus{
+    border: 3px purple solid;
+}
+
+input:focus, .btn:focus{
+    outline-width: 0;
+}
