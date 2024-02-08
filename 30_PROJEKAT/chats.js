@@ -8,7 +8,11 @@ class Chatroom {
         this._room = room
     }
     set username(username){
-        this._username = username;
+        if(username.length > 2 && username.length <= 10 && username.trim().length !=0){
+            this._username = username;
+        }else{
+            alert('invalid username')
+        }
     }
     get room(){
         return this._room;
