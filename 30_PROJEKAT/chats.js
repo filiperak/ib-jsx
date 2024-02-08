@@ -86,7 +86,9 @@ class Chatroom {
     }
 }
 
-let classtest1 = new Chatroom('js','user2')
+export {Chatroom};
+
+//let classtest1 = new Chatroom('js','user2')
 //console.log(classtest1.room,classtest1.username);
 //console.log(classtest1);
 //console.log(classtest2);
@@ -106,7 +108,7 @@ classtest1.addChat('Zdravo svima')
 //.catch((err) => {
 //    console.log('greska:',err);
 //});
-let classtest2 = new Chatroom('homeworks','user3')
+//let classtest2 = new Chatroom('homeworks','user3')
 //classtest2.addChat('test3333')
 //.then(() => {
 //    console.log('uspesno dodat cet');
@@ -115,6 +117,6 @@ let classtest2 = new Chatroom('homeworks','user3')
 //    console.log('greska',e);
 //})
 //classtest1.addChat('Dobro dosli')
-classtest1.getChats(data => {
-    console.log(data);
-});
+//classtest1.getChats(data => {
+//    console.log(data);
+//});

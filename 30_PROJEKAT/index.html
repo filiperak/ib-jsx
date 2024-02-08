@@ -18,7 +18,9 @@
         <div class="chatroom" id="chatTests">#tests</div>
     </div>
     <section id="msgSection">
-
+        <ul class="msgUl">
+            
+        </ul>
     </section>
     <form id="inputMsg" class="inpForm">
         <input type="text" name="msg" id="msg" placeholder="Send mesage">
@@ -44,6 +46,6 @@
 	    firebase.initializeApp(firebaseConfig);
 	    let db = firebase.firestore();
     </script>
-    <script src="chats.js"></script>
+    <script src="app.js" type="module"></script>
 </body>
 </html>
