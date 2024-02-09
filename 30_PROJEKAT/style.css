@@ -58,3 +58,6 @@ input:focus{
 input:focus, .btn:focus{
     outline-width: 0;
 }
+section{
+    text-align: center;
+}
