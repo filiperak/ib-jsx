@@ -6,7 +6,8 @@ const messageInp = document.querySelector('#msg');
 const formMsg = document.querySelector('#inputMsg');
 const formUpdate = document.querySelector('#inputUpdate');
 const usernameInp = document.querySelector('#username');
-
+const chatroomOptions = document.querySelectorAll('.chatroom');
+//PROVERA I SET USERNAME U LOCALSTORAGE
 const getUserData = () => {
     if(localStorage.getItem('user') == null){
         return localStorage.setItem('user','anonymus')
@@ -14,16 +15,28 @@ const getUserData = () => {
         return localStorage.getItem('user')
     }
 }
-
 let usernameStorage = getUserData();
 
 //OBJEKTI
-let chatroom1 = new Chatroom('homeworks',usernameStorage)
+let chatroom1 = new Chatroom('general',usernameStorage)
 let chatUI1 = new chatUI(messageUl);
 //PRIKAZ PORUKA NA STRANICI
+
+chatroomOptions.forEach(elem => {
+    elem.addEventListener('click',(e) => {
+        chatUI1.delete();
+        let target = e.target.id
+        chatroom1.room = target;
+        chatroom1.getChats(data => {
+            chatUI1.tamplateLI(data)
+        });
+    })
+})
+
 chatroom1.getChats(data => {
     chatUI1.tamplateLI(data)
 });
+
 
 formMsg.addEventListener('submit',(e) => {
     e.preventDefault();

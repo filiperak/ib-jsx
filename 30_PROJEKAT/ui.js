@@ -16,4 +16,7 @@ export class chatUI {
         //return liElem;
         return this.list.append(liElem)
     }
+    delete(){
+        this.list.innerHTML = '';
+    }
 }
