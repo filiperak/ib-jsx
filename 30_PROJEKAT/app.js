@@ -22,17 +22,6 @@ let chatroom1 = new Chatroom('general',usernameStorage)
 let chatUI1 = new chatUI(messageUl);
 //PRIKAZ PORUKA NA STRANICI
 
-chatroomOptions.forEach(elem => {
-    elem.addEventListener('click',(e) => {
-        chatUI1.delete();
-        let target = e.target.id
-        chatroom1.room = target;
-        chatroom1.getChats(data => {
-            chatUI1.tamplateLI(data)
-        });
-    })
-})
-
 chatroom1.getChats(data => {
     chatUI1.tamplateLI(data)
 });
@@ -54,3 +43,25 @@ formUpdate.addEventListener('submit',(e) => {
     localStorage.setItem('user',usernameVal)
     formUpdate.reset();
 });
+
+messageInp.addEventListener('keypress',(e) => {
+    if(e.which === 13){
+        let msgVal = messageInp.value;
+        if(msgVal.trim() != 0){
+            chatroom1.addChat(msgVal);
+        } 
+        formMsg.reset();
+    }
+   
+})
+
+chatroomOptions.forEach(elem => {
+    elem.addEventListener('click',(e) => {
+        chatUI1.delete();
+        let target = e.target.id
+        chatroom1.room = target;
+        chatroom1.getChats(data => {
+            chatUI1.tamplateLI(data)
+        });
+    })
+})
