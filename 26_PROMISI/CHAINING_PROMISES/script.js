@@ -18,6 +18,7 @@ let getJSON = (resource) => {
     });
     return promise;
 }
+///////////////////////////////////
 getJSON('../JSON/prvi.json').then( sadrzaj => {
     console.log('Prvi.json',sadrzaj);
     return getJSON('../JSON/drugi.json')                   //vraca instancu promise, koja moze imati .then i .catch
