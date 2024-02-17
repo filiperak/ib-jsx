@@ -55,7 +55,7 @@ getJSON('../JSON/prvi.json').then( sadrzaj => {
                                                                       //ispisuje gresku iz prvi.json
     }
 });
-
+///////////////////////
 */
 console.log('kraj fajla');
 
