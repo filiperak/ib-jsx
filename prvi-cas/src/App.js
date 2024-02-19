@@ -19,7 +19,8 @@ function App() {
           borderRadius:'10px',
           width:'fit-content'
         }}
-      >Hallo World
+      >
+        Hallo World
       </h1>
       <div style={myStyle.container}>
         <p style={myStyle.heading}>Welcome to my app</p>
