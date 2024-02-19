@@ -6,11 +6,14 @@ const Counter = () => {
     const handleDecrement = () => {
         setState(state - 1);
     }
+    const formatState = () => {
+        return state === 0? 'zero' : state;
+    }
     return (
         <div>
             <h3>Welcom to Counter Component</h3>
             <button onClick={handleDecrement}>-</button>
-            <span>{state}</span>
+            <span>{formatState()}</span>
             <button onClick={() => setState(state + 1)}>+</button>
         </div>
     )

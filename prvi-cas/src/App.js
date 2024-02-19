@@ -1,5 +1,6 @@
 import './App.css';
 import Counter from './Counter';
+import CounterList from './CounterList';
 
 function App() {
   const myStyle = {
@@ -27,6 +28,7 @@ function App() {
         <p style={myStyle.heading}>Welcome to my app</p>
       </div>
       <Counter/>
+      <CounterList/>
     </div>
   );
 }
