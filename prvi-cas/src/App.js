@@ -1,4 +1,5 @@
 import './App.css';
+import Counter from './Counter';
 
 function App() {
   const myStyle = {
@@ -25,6 +26,7 @@ function App() {
       <div style={myStyle.container}>
         <p style={myStyle.heading}>Welcome to my app</p>
       </div>
+      <Counter/>
     </div>
   );
 }
