@@ -10,12 +10,12 @@ const Checkbox = () => {
     const handleChange = (index) => {
         const updatedCheckboxes = [...lang];
         updatedCheckboxes[index].isChecked = !updatedCheckboxes[index].isChecked;
-        setLang(updatedCheckboxes)
+        setLang(updatedCheckboxes);
     }
     return (
         <div>
-            {
-                lang.map((lang, index) => (
+            <h1>I know {lang.filter((lang) => lang.isChecked).length || 'nothing'} </h1>
+            {lang.map((lang, index) => (
                     <div key={index}>
                         <label>
                             <input type="checkbox"
