@@ -4,15 +4,17 @@ import Textarea from './components/Textarea';
 import Input from './components/input';
 import Select from './components/Select';
 import Checkbox from './components/Checkbox';
+import Vezba from './components/Vezba';
 
 function App() {
   return (
     <div className="App">
-      <Form/>
+      {/* <Form/>
       <Textarea/>
       <Input/>
       <Select/>
-      <Checkbox/>
+      <Checkbox/> */}
+      <Vezba/>
     </div>
   );
 }
