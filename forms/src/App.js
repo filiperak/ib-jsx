@@ -9,11 +9,11 @@ import Vezba from './components/Vezba';
 function App() {
   return (
     <div className="App">
-      {/* <Form/>
+      <Form/>
       <Textarea/>
       <Input/>
       <Select/>
-      <Checkbox/> */}
+      <Checkbox/> 
       <Vezba/>
     </div>
   );
