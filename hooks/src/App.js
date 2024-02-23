@@ -14,7 +14,7 @@ function App() {
       <button onClick={() => setShow(!show)}>{show? 'hide':'show'}</button>
       <Select/>
       <SongList/>
-      <NewSongForm/>
+
     </div>
   );
 }
