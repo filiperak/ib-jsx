@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { TaskContext } from "../context/TaskContext";
 import { useContext } from "react";
+import { AddContext } from "../context/AddContext";
 
 const FormAddTask = () => {
+    const {isClicked, toggleClicked} = useContext(AddContext);
     const {dispatch} = useContext(TaskContext);
     const [task,setTask] = useState('');
     const handleChange = (e) => {
@@ -11,6 +13,7 @@ const FormAddTask = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({type:'ADD_TASK',task})
+        toggleClicked()
     }
 
     return(

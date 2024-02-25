@@ -1,4 +1,130 @@
+*{
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
+.container{
+  border: 2px solid red;
+  width: 80vw;
+  margin-top: 3%;
+  height: 80vh;
+}
+.list-container{
+  background-color: #22a3db;
+  width: 100%;
+  height: 15%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+
+}
+.add-task{
+  display: flex;
+  align-items: center;
+  height: 60%;
+  border-radius: 10px;
+  background-color: #beccc3;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 25%;
+  
+}
+.add-task button{
+  position: absolute;
+  right: 3%;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  display: block;
+  height: 60%;
+  width: 20%;
+  margin: 3%;
+  cursor: pointer;
+}
+.add-task p{
+  font-size: 14px;
+  padding-left: 5%;
+  font-weight: 650;
+}
+.pending-todos{
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 3%;
+  display: block;
+  background-color: #beccc3;
+  font-size: 14px;
+  padding-left: 1%;
+  height: 60%;
+  width: 100%;
+  font-weight: 650;
+}
+.form-add-task{
+  margin-top: 2%;
+  position: absolute;
+  right: 2%;
+  border-radius: 4px;
+  height: 150px;
+  width: 300px;
+  background-color: #8e918f;
+
+}
+.form-add-task input[type="text"]{
+  border: none;
+  height: 40%;
+  width: 65%;
+  border-radius: 4px;
+  position: absolute;
+  margin: 3%;
+  bottom: 0%;
+}
+.form-add-task input[type="submit"]{
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  margin: 3%;
+  height: 20%;
+  width: 20%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: rgb(31, 227, 41);
+}
+.form-add-task p{
+  font-weight: 450;
+  text-align: center;
+  margin-top: 3%;
+}
+.task-list{
+  background-color: #f4f4f4;
+  overflow-y: scroll;
+  height: 75%;
+}
+.task-list li{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 2%;
+  padding: 1%;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.task-list li:hover{
+  background-color: #8e918f;
+}
+.task-list li span{
+  cursor: pointer;
+}
+.footer{
+  height: 10%;
+  background-color: #22a3db;
+  border-radius: 0 0 10px 10px;
 }

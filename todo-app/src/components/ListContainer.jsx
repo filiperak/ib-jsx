@@ -1,20 +1,23 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import FormAddTask from "./FormAddTask";
+import { AddContext } from "../context/AddContext";
+import { TaskContext } from "../context/TaskContext";
+
 
 const ListContainer = () => {
-    const [addTask,setAddTask] = useState(false);
-    const handleAddBtn = () => {
-        setAddTask(!addTask)
-    }
+
+    const {isClicked, toggleClicked} = useContext(AddContext);
+    const {tasks} = useContext(TaskContext);
 
     return(
         <section className="list-container">
             <header>
-                <div>
+            <span className="pending-todos">Pending todos: {tasks.length}</span>
+                <div className="add-task">
                     <p>Add task</p>
-                    <button onClick={handleAddBtn}>+</button>
+                    <button onClick={toggleClicked}>+</button>
                 </div>
-                {addTask ? (<FormAddTask/>): null}
+                {isClicked ? (<FormAddTask/>): null}
             </header>
         </section>
     )

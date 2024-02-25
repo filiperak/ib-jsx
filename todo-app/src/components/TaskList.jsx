@@ -1,12 +1,11 @@
 import { useContext } from "react";
-// import {TaskContext} from "../context/TaskContext";
 import { TaskContext } from "../context/TaskContext";
 import TaskListItem from "./TaskListItem";
 
 const TaskList = () => {
     const {tasks} = useContext(TaskContext);
     return tasks.length ? (
-        <div>
+        <div className="task-list">
             {tasks.map((task) => (
                 <TaskListItem key={task.id} task={task}/>
             ))}
