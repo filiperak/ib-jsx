@@ -10,6 +10,6 @@ const TaskList = () => {
                 <TaskListItem key={task.id} task={task}/>
             ))}
         </div>
-    ):(<div>All tasks are compleated :)</div>)
+    ):(<div className="no-tasks">All tasks are compleated :)</div>)
 }
 export default TaskList;

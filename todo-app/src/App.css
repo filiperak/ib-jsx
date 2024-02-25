@@ -9,7 +9,6 @@
 }
 
 .container{
-  border: 2px solid red;
   width: 80vw;
   margin-top: 3%;
   height: 80vh;
@@ -127,4 +126,11 @@
   height: 10%;
   background-color: #22a3db;
   border-radius: 0 0 10px 10px;
+}
+.no-tasks{
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
 }
