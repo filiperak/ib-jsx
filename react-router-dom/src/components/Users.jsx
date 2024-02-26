@@ -1,5 +1,6 @@
 import { useEffect, useContext } from "react";
 import { UserContext } from "../context/UserContext";
+import { Link } from "react-router-dom";
 
 const Users = () => {
   const { users, dispatch } = useContext(UserContext);
@@ -18,7 +19,8 @@ const Users = () => {
         <h1>USERS</h1>
         {users.map(user => (
             <p key={user.id}>
-            #{user.name}
+            #{user.id}
+            <Link to={`/users/${user.id}`}>{user.name}</Link>
             </p>
         ))}
         </>
