@@ -8,7 +8,7 @@ const ListContainer = () => {
 
     const {isClicked, toggleClicked} = useContext(AddContext);
     const {tasks} = useContext(TaskContext);
-
+    //console.log(tasks);
     return(
         <section className="list-container">
             <header>
