@@ -14,14 +14,14 @@ const Users = () => {
   }, []);
 
   return (
-    <>
-      <h1>USERS</h1>
-      {users.map(user => (
-        <p key={user.id}>
-          #{user.id}
-        </p>
-      ))}
-    </>
+        <>
+        <h1>USERS</h1>
+        {users.map(user => (
+            <p key={user.id}>
+            #{user.name}
+            </p>
+        ))}
+        </>
   );
 }
 
