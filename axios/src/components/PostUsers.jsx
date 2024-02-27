@@ -8,7 +8,7 @@ const PostUsers = () => {
         e.preventDefault();
     }
     
-    api.get(`/users/`,
+    axios.get(`https://jsonplaceholder.typicode.com/users`,
     {user:{name}})
     .then(res => {
         console.log(res.data);
